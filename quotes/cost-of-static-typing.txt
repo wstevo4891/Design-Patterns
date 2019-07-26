@@ -1,0 +1,5 @@
+***Cost of Static Typing***
+
+Statically typed languages are so pervasive these days that a key question is rarely asked: What is the cost of static typing? My answer is that static typing costs a lot. In fact, in the currency of programming effort and code clutter, static typing costs a fortune. Look at a Java or C# program and count the number of tokens devoted to parameter and variable declarations. Add in most of the interfaces. Don’t forget those pesky class casts, where you convince the typing system that, yes, that really is a String over there. Add a bonus for each complex generic declaration. All of this code clutter is not free.[2]
+
+Olsen, Russ. Design Patterns in Ruby (Addison-Wesley Professional Ruby Series) (pp. 69-70). Pearson Education. Kindle Edition.
