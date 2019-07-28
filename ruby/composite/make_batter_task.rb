@@ -4,10 +4,18 @@ require_relative 'add_liquids_task'
 require_relative 'mix_task'
 
 class MakeBatterTask < CompositeTask
+  def self.call
+    new.call
+  end
+
   def initialize
     super('Make batter')
-    add_sub_task(AddDryIngredientsTask.new)
-    add_sub_task(AddLiquidsTask.new)
-    add_sub_task(MixTask.new)
+  end
+
+  def call
+    self << AddDryIngredientsTask.new
+    self << AddLiquidsTask.new
+    self << MixTask.new
+    self
   end
 end

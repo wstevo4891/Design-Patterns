@@ -31,4 +31,14 @@ class CompositeTask < Task
     @sub_tasks.each { |task| total += task.total_number_basic_tasks }
     total
   end
+
+  def perform_sub_tasks
+    @subtasks.each do |task|
+      if task.parent.is_a? Task
+        puts task.name
+      else
+        task.perform_sub_tasks
+      end
+    end
+  end
 end
