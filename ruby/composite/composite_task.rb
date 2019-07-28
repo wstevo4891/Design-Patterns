@@ -33,12 +33,12 @@ class CompositeTask < Task
   end
 
   def perform_sub_tasks
-    @subtasks.each do |task|
-      if task.parent.is_a? Task
-        puts task.name
-      else
-        task.perform_sub_tasks
-      end
+    @sub_tasks.each do |task|
+      puts task.name
+
+      next unless task.is_a? CompositeTask
+
+      task.perform_sub_tasks
     end
   end
 end
