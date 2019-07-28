@@ -4,7 +4,7 @@ class Report
 
   def initialize(formatter)
     @title = 'Monthly Report'
-    @text =  [ 'Things are going', 'really, really well.' ]
+    @text =  ['Things are going', 'really, really well.']
     @formatter = formatter
   end
 
