@@ -18,6 +18,6 @@ fred.salary = 35_000.0
 
 puts "Fred's salary: #{fred.salary}"
 
-puts 'Fred is getting a promotion!'
+puts "Updating Fred's title"
 fred.title = 'Vice President of Sales'
 fred.salary = 90_000.0
